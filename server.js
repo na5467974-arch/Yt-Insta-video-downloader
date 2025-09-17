@@ -42,7 +42,10 @@ app.get("/api/instagram", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch Instagram video" });
   }
 });
-
+// Root route
+app.get("/", (req, res) => {
+  res.send("✅ YouTube & Instagram Video Downloader Backend is running!");
+});
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
